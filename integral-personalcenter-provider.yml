@@ -25,7 +25,7 @@ spring:
 
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml
-  type-aliases-package: com.jarvis.springcloud.api.entities
+  type-aliases-package: com.dmsdbj.cloud.integralpersonalcenterapi.entities
   mapper-locations: classpath:mybatis/mapper/**/*.xml
 
 eureka:
@@ -68,7 +68,7 @@ spring:
 
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml
-  type-aliases-package: com.jarvis.springcloud.api.entities
+  type-aliases-package: com.dmsdbj.cloud.integralpersonalcenterapi.entities
   mapper-locations: classpath:mybatis/mapper/**/*.xml
 
 eureka:
