@@ -32,7 +32,7 @@ eureka:
   client:
     service-url:
       #客户端注册进eureka服务列表内
-      defaultZone: http://eureka7001.com:7001/eureka/
+      defaultZone: http://192.168.22.107:20000/eureka/
   instance:
     #注册到eureka后，status的名字（服务在eureka的唯一标志）
     instance-id: jarvis-8001
@@ -75,7 +75,7 @@ eureka:
   client:
     service-url:
       #客户端注册进eureka服务列表内
-      defaultZone: http://eureka7001.com:7001/eureka/
+      defaultZone: http://192.168.22.107:20000/eureka/
   instance:
     #注册到eureka后，status的名字（服务在eureka的唯一标志）
     instance-id: jarvis-8001
