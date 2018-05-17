@@ -7,6 +7,6 @@ feign:
 
 eureka:
   client:
-    register-with-eureka: false
+    register-with-eureka: true
     service-url:
       defaultZone: http://192.168.22.107:20002/eureka/
