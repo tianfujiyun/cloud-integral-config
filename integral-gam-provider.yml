@@ -27,6 +27,12 @@ mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml
   type-aliases-package: com.dmsdbj.cloud.integralgamapi.entities
   mapper-locations: classpath:mybatis/mapper/**/*.xml
+  
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
 
 eureka:
   client:
@@ -70,6 +76,12 @@ mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml
   type-aliases-package: com.dmsdbj.cloud.integralgamapi.entities
   mapper-locations: classpath:mybatis/mapper/**/*.xml
+  
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
 
 eureka:
   client:
