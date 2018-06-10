@@ -1,0 +1,101 @@
+spring:
+  profiles:
+    active: -dev
+
+---
+
+server:
+  port: 8001
+spring:
+  profiles: dev
+  application:
+    name: integral-mcoin-provider
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://192.168.22.58:3306/excellentintegral_java_dev
+    username: jifen
+    password: jifen
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
+
+
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.dmsdbj.cloud.integralmcoinapi.entities
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
+  
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
+
+eureka:
+  client:
+    service-url:
+      #客户端注册进eureka服务列表内
+      defaultZone: http://192.168.22.118:7001/eureka/
+  instance:
+    #注册到eureka后，status的名字（服务在eureka的唯一标志）
+    instance-id: mcoin-8001
+    #访问路径可以显示IP地址
+    prefer-ip-address: true
+
+info:
+  app.name: provider-dept-8001
+  company.name: www.jarvis.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+
+---
+
+server:
+  port: 8001
+spring:
+  profiles: test
+  application:
+    name: integral-mcoin-provider
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://192.168.22.58:3306/excellentintegral_java_dev
+    username: jifen
+    password: jifen
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
+
+
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.dmsdbj.cloud.integralmcoinapi.entities
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
+  
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
+
+eureka:
+  client:
+    service-url:
+      #客户端注册进eureka服务列表内
+      defaultZone: http://192.168.22.118:7001/eureka/
+  instance:
+    #注册到eureka后，status的名字（服务在eureka的唯一标志）
+    instance-id: mcoin-8001
+    #访问路径可以显示IP地址
+    prefer-ip-address: true
+
+info:
+  app.name: provider-dept-8001
+  company.name: www.jarvis.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
