@@ -13,7 +13,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: org.gjt.mm.mysql.Driver
-    url: jdbc:mysql://192.168.22.58:3306/excellentintegral_java_dev
+    url: jdbc:mysql://192.168.22.58:3306/excellentintegral_java_dev?autoReconnect=true&useSSL=false&characterEncoding=utf-8
     username: jifen
     password: jifen
     dbcp2:
@@ -62,7 +62,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: org.gjt.mm.mysql.Driver
-    url: jdbc:mysql://192.168.22.58:3306/excellentintegral_java_dev
+    url: jdbc:mysql://192.168.22.58:3306/excellentintegral_java_dev?autoReconnect=true&useSSL=false&characterEncoding=utf-8
     username: jifen
     password: jifen
     dbcp2:
