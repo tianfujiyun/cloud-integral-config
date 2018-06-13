@@ -8,8 +8,9 @@ feign:
 eureka:
   client:
     register-with-eureka: true
+    registryFetchIntervalSeconds: 5 # eureka client刷新本地缓存时间
     service-url:
-      defaultZone: http://192.168.22.118:7001/eureka/
+      defaultZone: http://192.168.22.107:20002/eureka/
       
   instance:
     #注册到eureka后，status的名字（服务在eureka的唯一标志）
